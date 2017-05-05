@@ -9,9 +9,9 @@ defmodule PaperTrail.Version do
   schema "versions" do
     field :event, :string
     field :item_type, :string
-    field :item_id, :integer
+    field :item_id, :binary_id
     field :item_changes, :map
-    field :originator_id, :integer
+    field :originator_id, :binary_id
     field :origin, :string, read_after_writes: true
     field :meta, :map
 
